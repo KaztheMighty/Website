@@ -1,5 +1,153 @@
-.leftbar {
-	float: left;
-	outline-width: 1px;
-	outline-color: black;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar */
+/* When the screen is below 800px, this is the CSS used. */
+nav {
+    background: white;
+    box-shadow: 10px 5px 10px grey;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.menu-toggle {
+    display: block;
+}
+
+.menu-toggle:hover {
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.links a {
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+.links a:hover {
+    color: grey;
+    padding-left: 1.5rem;
+}
+
+.links {   
+    height: 0;
+    overflow: hidden;
+}
+
+.show-links {
+    height: 10rem;
+}
+
+/* When the screen is above 800px, this is the CSS used. */
+@media screen and (min-width: 800px) {
+    .nav-center {
+        max-width: 100%;
+        margin: auto 0px auto auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+  
+    .nav-header {
+        padding: 0;
+        margin: auto;
+        font-size: 10px;
+    }
+  
+    .menu-toggle {
+        display: none;
+    }
+  
+    .links {
+        height: auto;
+        display: flex;
+    }
+  
+    .links a {
+        padding: 0 10px 0 10px;
+        margin: 0 0.5rem;
+    }
+    
+    .links a:hover {
+        padding: 0 10px 0 10px;
+        background: transparent;
+    }
+}
+
+
+/* Header */
+header {
+    min-height: 90vh;
+    background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)), url(images/bg.jpg) center/cover no-repeat;
+}
+
+.banner {
+    min-height: 95vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.container h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+.container p {
+    color: white;
+    max-width: 40rem;
+    margin-bottom: 1.25rem;
+}
+
+
+/* Sections */
+.title h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title span {
+  color: #15ccff;
+}
+
+section {
+    height: 80vh;
+}
+
+#resume {
+  background: #f1f5f8;
+}
+
+
+/* Footer */
+footer {
+  background: #164266;
+  padding: 5rem 1rem;
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 5px;
 }
